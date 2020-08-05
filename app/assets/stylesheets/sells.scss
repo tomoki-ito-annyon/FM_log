@@ -1,3 +1,16 @@
-// Place all the styles related to the sells controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.SellPage {
+  height: 100vh;
+  width: 100vw;
+  background-color :#f8f8f8;
+  &__header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__logo {
+      display: block;
+      width: 15%;
+    }
+  }
+}
