@@ -68,3 +68,6 @@ end
 group :production do
   gem 'unicorn'
 end
+
+# include haml-rails gem, Referenced haml-rails README.md
+gem "haml-rails", "~> 2.0"
