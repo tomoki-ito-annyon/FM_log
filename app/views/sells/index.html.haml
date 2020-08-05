@@ -2,3 +2,15 @@
   .SellPage__header
     = image_tag "/material/logo/logo.png", class: "SellPage__header__logo"
   .SellPage__contents
+    = form_with url: "#", class: "SellPage_format" do |form|
+      .Sellpage__contents__title
+        出品画像
+      .Sellpage__contents__body
+        画像をアップロード出来ます
+        .Sellpage__contents--imgbtm
+          ドラックアンドドロップ
+      .Sellpage__contents__title
+        商品名
+        = form.text_field :itemname, placeholder: "40文字まで", class: "SellPage__format--text"
+      .Sellpage__contents__body
+        画像をアップロード出来ます
