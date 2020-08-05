@@ -1,7 +1,7 @@
 .SellPage {
   height: 100vh;
   width: 100vw;
-  background-color :#f8f8f8;
+  background-color :#f8f8f8;  
   &__header {
     width: 100%;
     height: 15%;
@@ -12,5 +12,10 @@
       display: block;
       width: 15%;
     }
+  }
+  &__contents {
+    background-color : #ffffff;
+    height: calc(100vh - 15%);
+    width: 100%;
   }
 }
