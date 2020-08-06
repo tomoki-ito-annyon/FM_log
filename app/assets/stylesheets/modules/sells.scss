@@ -10,14 +10,14 @@
     align-items: center;
     &__logo {
       display: block;
-      margin: 3% 0;
-      width: 15%;
+      margin: 2.5% 0;
+      width: 12%;
     }
   }
   &__contents {
     background-color : #ffffff;
     height: calc(100vh - 15%);
-    width: 60%;
+    width: 40%;
     margin: 0 auto;
     padding: 3% 3%;
     &__paragraph{
@@ -135,7 +135,7 @@
     &__logo {
       display: block;
       margin: 2% 0;
-      width: 10%;
+      width: 8%;
     }
   }
 }
