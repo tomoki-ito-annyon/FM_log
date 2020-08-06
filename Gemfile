@@ -71,3 +71,6 @@ end
 
 # include haml-rails gem, Referenced haml-rails README.md
 gem "haml-rails", "~> 2.0"
+
+# include acitive_hash gem, Referenced acitive_hash README.md
+gem "active_hash"
