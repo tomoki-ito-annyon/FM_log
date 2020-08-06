@@ -38,6 +38,7 @@
 |name|string|null: false|
 |price|integer|null: false|
 |item_detail|text||
+|item_status|string|null: false|
 |delivery_fee_detail|string|null: false|
 |delivery_days|integer|null: false|
 |created_at|date|null: false|
