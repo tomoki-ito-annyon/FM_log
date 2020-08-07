@@ -58,6 +58,7 @@
 
 ### phases table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -68,6 +69,7 @@
 
 ### statuses table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -78,6 +80,7 @@
 
 ### delivery_to_pays table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -105,6 +108,7 @@
 
 ### prefectures table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -133,6 +137,7 @@
 
 ### brands table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -183,6 +188,7 @@
 
 ### categories table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
