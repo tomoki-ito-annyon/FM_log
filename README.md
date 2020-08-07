@@ -48,7 +48,7 @@
 - belongs_to :phase
 - belongs_to :status
 - belongs_to :delivery_to_pay
-- belongs_to :categories
+- belongs_to :category
 
 ### phases table
 - use active_hash
@@ -146,7 +146,7 @@
 |id|integer|primary_key|
 |user_id|integer|null: false, foreign_key: true|
 |item_id|integer|null: false, foreign_key: true|
-|text|text||
+|text|text|null: false|
 |created_at|date|null: false|
 |updated_at|date|null: false|
 
