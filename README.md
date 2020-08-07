@@ -32,7 +32,7 @@
 |category_id|integer|null: false, foreign_key: true|
 |phase_id|integer|null: false, foreign_key: true|
 |status_id|integer|null: false, foreign_key: true|
-|delivery_to_pay_id|string|null: false, foreign_key: true|
+|delivery_to_pay_id|integer|null: false, foreign_key: true|
 |name|string|null: false|
 |price|integer|null: false|
 |item_detail|text||
