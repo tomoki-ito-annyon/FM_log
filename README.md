@@ -5,7 +5,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
-|street_id|integer|null: false, foreign_key: true|
 |image|string||
 |surname|string|null: false|
 |surname_kana|string|null: false|
@@ -21,12 +20,8 @@
 #### Association
 - has_one :street
 - has_many :items
-- has_many :messages, through: :users_messages
 - has_many :messages
-- has_many :users_messages
-- has_many :credits, through: :users_credits
 - has_many :credits
-- has_many :users_credits
 
 ### items table
 |Column|Type|Options|
@@ -34,6 +29,7 @@
 |id|integer|primary_key|
 |sell_user_id|integer|null: false, foreign_key: true|
 |buy_user_id|integer|null: false, foreign_key: true|
+|category_id|integer|null: false, foreign_key: true|
 |phase_id|integer|null: false, foreign_key: true|
 |status_id|integer|null: false, foreign_key: true|
 |delivery_to_pay_id|string|null: false, foreign_key: true|
@@ -52,12 +48,11 @@
 - belongs_to :phase
 - belongs_to :status
 - belongs_to :delivery_to_pay
-- has_many :categories, through: :items_categories
-- has_many :categories
-- has_many :items_categories
+- belongs_to :categories
 
 ### phases table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -68,6 +63,7 @@
 
 ### statuses table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -78,6 +74,7 @@
 
 ### delivery_to_pays table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -90,6 +87,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
+|user_id|integer|null: false, foreign_key: true|
 |prefecture_id|string|null: false, foreign_key: true|
 |postal_code|string|null: false, limit: 7|
 |city|string|null: false|
@@ -105,6 +103,7 @@
 
 ### prefectures table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -117,6 +116,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
+|user_id|integer|null: false, foreign_key: true|
 |brand_id|integer|null: false, foreign_key: true|
 |card_number|string|null: false, limit: 16|
 |expiration|string|null: false, limit: 5|
@@ -127,12 +127,11 @@
 |updated_at|date|null: false|
 
 #### Association
-- has_many :users, through: :users_credits
-- has_many :users
-- has_many :users_credits
+- belongs_to :user
 
 ### brands table
 - use active_hash
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
@@ -145,16 +144,15 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
+|user_id|integer|null: false, foreign_key: true|
 |item_id|integer|null: false, foreign_key: true|
 |text|text||
 |created_at|date|null: false|
 |updated_at|date|null: false|
 
 #### Association
+- belongs_to :user
 - belongs_to :item
-- has_many :users, through: :users_messages
-- has_many :users
-- has_many :users_messages
 
 ### item_images table
 |Column|Type|Options|
@@ -168,51 +166,16 @@
 #### Association
 - belongs_to :item
 
-### items_categories table
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|primary_key|
-|item_id|integer|null: false, foreign_key: true|
-|category_id|integer|null: false, foreign_key: true|
-|created_at|date|null: false|
-|updated_at|date|null: false|
-
-#### Association
-- belongs_to :item
-- belongs_to :category
-
 ### categories table
-- use active_hash
+- use ancestry
+
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|primary_key|
+|path|string||
 |name|string|null: false|
-
-#### Association
-<!-- no association because use active_hash -->
-
-### users_credits table
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|primary_key|
-|user_id|integer|null: false, foreign_key: true|
-|credit_id|integer|null: false, foreign_key: true|
 |created_at|date|null: false|
 |updated_at|date|null: false|
 
 #### Association
-- belongs_to :user
-- belongs_to :credit
-
-### users_messages table
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|primary_key|
-|user_id|integer|null: false, foreign_key: true|
-|messages_id|integer|null: false, foreign_key: true|
-|created_at|date|null: false|
-|updated_at|date|null: false|
-
-#### Association
-- belongs_to :user
-- belongs_to :message
+- has_many :items
