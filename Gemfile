@@ -74,3 +74,6 @@ gem "haml-rails", "~> 2.0"
 
 # include acitive_hash gem, Referenced acitive_hash README.md
 gem "active_hash"
+
+# include ancestry gem, Referenced ancestry README.md
+gem "ancestry"
