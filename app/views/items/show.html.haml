@@ -5,7 +5,7 @@
         FURIMA
     %li
       = icon('fas', 'angle-right')
-.main
+.show__main
   .showMain
     .contentLeftqq
     .showMain__contentRight
@@ -16,10 +16,10 @@
           .itemBox__body
             %ul
               %li
-                = image_tag "material/beef.jpeg", alt: "サンプル画像", class: "bodyImage"
+                = image_tag "material/beef.jpeg", alt: "サンプル画像"
                 %ul
                   %li
-                    = image_tag "material/beef.jpeg",size: "75x75", alt: "サンプル画像", class: "bodyImageSub"
+                    = image_tag "material/beef.jpeg",size: "75x75", alt: "サンプル画像"
           .itemBox__price
             %span
               ¥10000
@@ -30,18 +30,18 @@
                 送料込み
           .itemDetail
             テストテストテストテストテストテスト
-          .table
-            %table
-              %tbody
-                %tr
-                  %th
+          .showTable
+            %table.showTable__table
+              %tbody.showTable__tbody
+                %tr.showTable__tr
+                  %th.showTable__th
                     出品者
-                  %td
+                  %td.showTable__td
                     あああ
-                %tr
-                  %th
+                %tr.showTable__tr
+                  %th.showTable__th
                     カテゴリー
-                  %td
+                  %td.showTable__td
                     = link_to "#" do
                       レディース
                     %br/
@@ -50,36 +50,36 @@
                     %br/
                     = link_to "#" do
                       Tシャツ/カットソー(半袖/袖なし)
-                %tr
-                  %th
+                %tr.showTable__tr
+                  %th.showTable__th
                     ブランド
-                  %td
+                  %td.showTable__td
                     
-                %tr
-                  %th
+                %tr.showTable__tr
+                  %th.showTable__th
                     商品のサイズ
-                  %td
+                  %td.showTable__td
                     
-                %tr
-                  %th
+                %tr.showTable__tr
+                  %th.showTable__th
                     商品の状態
-                  %td
+                  %td.showTable__td
                     新品/未使用
-                %tr
-                  %th
+                %tr.showTable__tr
+                  %th.showTable__th
                     配送料の負担
-                  %td
+                  %td.showTable__td
                     送料込み (出品者負担)
-                %tr
-                  %th
+                %tr.showTable__tr
+                  %th.showTable__th
                     発送元の地域
-                  %td
+                  %td.showTable__td
                     = link_to "#" do
                       北海道
-                %tr
-                  %th
+                %tr.showTable__tr
+                  %th.showTable__th
                     発送日の目安
-                  %td
+                  %td.showTable__td
                     1-2日で発送
           .optionalArea
             %ul
@@ -125,7 +125,7 @@
                 %figure.productList--img
                   = image_tag 'material/a001.png', alt: 'サンプル画像'
                 .productList--body
-                  %h3.name
+                  %h3.productList--body__name
                     product1
                   .details
                     %ul
