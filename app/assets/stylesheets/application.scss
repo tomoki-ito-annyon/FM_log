@@ -13,5 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
-// @import "modules/sells";
+@import "reset";
+@import "modules/sells";
+@import "font-awesome-sprockets";
+@import "font-awesome";
