@@ -72,4 +72,9 @@ end
 
 # include haml-rails gem, Referenced haml-rails README.md
 gem "haml-rails", "~> 2.0"
-gem "font-awesome-sass"
+gem 'font-awesome-sass'
+gem "active_hash"
+gem "ancestry"
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'devise'
